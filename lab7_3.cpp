@@ -1,8 +1,35 @@
 #include<iostream>
-
 using namespace std;
 
-
+int adiff(int a, int b)
+{
+  int r1, r2;
+  r1 = a%360;
+  r2 = b%360;
+  if(r1 > r2)
+  {
+    if ( (r1 - r2) <= 180)
+    {
+      return r1-r2;
+    }
+    if ( (r1 - r2) > 180)
+    {
+      return 360-(r1-r2);
+    }
+  }
+  else
+  {
+    if( r2 - r1 <= 180)
+    {
+      return r2-r1;
+    }
+    if( r2 - r1 > 180)
+    {
+      return 360 - (r2 - r1);
+    }
+  }
+  return 0;
+}
 int main(){
   cout << adiff(180,270);
   cout << adiff(210,45);
