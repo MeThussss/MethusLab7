@@ -5,6 +5,7 @@ int adiff(int a, int b)
 {
   int r1, r2;
   r1 = a%360;
+  
   r2 = b%360;
   if(r1 > r2)
   {
@@ -40,3 +41,4 @@ int main(){
   cout << adiff(1000,280);
   cout << adiff(60,244);
 }
+
